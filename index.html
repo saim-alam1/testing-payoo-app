@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo - login page</title>
+  <link rel="shortcut icon" href="assets/payoo.png" type="image/x-icon">
+
+  <!-- DaisyUi & Tailwind CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="relative">
+      <div class="flex justify-center items-center">
+        <img class="w-48 absolute top-10" src="assets/bg.png" alt="Blue Circle">
+        <img class="absolute top-20" src="assets/Group.png" alt="">
+      </div>
+
+      <div class="bg-base-200 min-h-screen">
+        <div class="hero-content flex-col lg:flex-row-reverse absolute top-48 w-full">
+
+          <div class="w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="fieldset-label">Mobile Number</label>
+                <input id="mobile-number" value="01301301302" type="number" class="input"
+                  placeholder="Enter your number" required />
+                <label class="fieldset-label">4 Digit Pin</label>
+                <input id="pin-number" value="1234" type="text" class="input" placeholder="Enter your Pin" required />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script src="scripts/utilities.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>
