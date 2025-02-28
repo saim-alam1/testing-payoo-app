@@ -67,7 +67,7 @@
           <h5>Pay Bill</h5>
         </div>
         <!-- Box - 6 -->
-        <div class="box border text-center rounded-md py-4 cursor-pointer">
+        <div id="transaction-box" class="box border text-center rounded-md py-4 cursor-pointer">
           <img class="mx-auto" src="assets/transaction1.png" alt="">
           <h5>Transactions</h5>
         </div>
@@ -140,12 +140,17 @@
           </div>
         </div>
       </section>
+
+      <section id="transaction-history">
+        <h1 class="text-3xl font-bold text-center p-4">Transaction History</h1>
+      </section>
     </section>
   </main>
 
-  <script src="scripts/utilities.js"></script>
+  <script src="utilities/utilities.js"></script>
   <script src="scripts/addmoney.js"></script>
   <script src="scripts/cashout.js"></script>
+  <script src="scripts/transaction-history.js"></script>
 </body>
 
 </html>

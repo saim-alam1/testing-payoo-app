@@ -1,6 +1,7 @@
 document.getElementById('cash-out-box').addEventListener('click', function () {
   setDisplay('cash-in', 'none');
   setDisplay('cash-out', 'block');
+  setDisplay('transaction-history', 'none');
 })
 
 
@@ -16,8 +17,6 @@ document.getElementById('withdraw-money-btn').addEventListener('click', function
   console.log(amount);
 
   const pinNumber = convertToNumber('pin-number-2');
-
-  // console.log(mainBalance, agentNumber, amountToReduce, pinNumber);
 
 
   if (agentNumber.length === 11) {

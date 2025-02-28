@@ -1,3 +1,9 @@
+document.getElementById('cash-in-box').addEventListener('click', function () {
+  setDisplay('cash-in', 'block');
+  setDisplay('cash-out', 'none');
+  setDisplay('transaction-history', 'none');
+})
+
 document.getElementById('add-money-btn').addEventListener('click', function (event) {
   event.preventDefault();
 
