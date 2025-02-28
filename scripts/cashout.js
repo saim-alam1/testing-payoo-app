@@ -23,8 +23,16 @@ document.getElementById('withdraw-money-btn').addEventListener('click', function
     if (amount && pinNumber) {
       if (pinNumber === 1234) {
         const sum = mainBalance - amount;
-
         changeTheValue('main-balance', sum);
+
+        const container = document.getElementById('transaction-container');
+
+        const p = document.createElement('p');
+        p.innerText = `Cashout ${amount} from Agent Number ${agentNumber}`;
+
+        container.appendChild(p);
+
+
       } else {
         console.log('Invalid PIN');
       }

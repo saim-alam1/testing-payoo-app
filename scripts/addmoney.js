@@ -20,6 +20,16 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
       if (pinNumber === 1234) {
         const sum = mainBalance + amountToAdd;
         changeTheValue('main-balance', sum);
+
+        const container = document.getElementById('transaction-container');
+
+        const p = document.createElement('p');
+        p.innerText = `Added ${amountToAdd} from ${accountNumber}`;
+
+        container.appendChild(p);
+
+
+
       } else {
         console.log('Enter a valid PIN');
       }
