@@ -21,3 +21,8 @@ function convertMainBalanceIntoNumber(id) {
 function changeTheValue(id, value) {
   document.getElementById(id).innerText = value;
 }
+
+// Display "Block" or "None" function
+function setDisplay(id, value) {
+  document.getElementById(id).style.display = value;
+}

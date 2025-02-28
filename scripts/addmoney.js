@@ -1,4 +1,6 @@
-document.getElementById('add-money-btn').addEventListener('click', function () {
+document.getElementById('add-money-btn').addEventListener('click', function (event) {
+  event.preventDefault();
+
   const accountNumber = forValue('account-number');
 
   const amountToAdd = convertToNumber('amount-number');

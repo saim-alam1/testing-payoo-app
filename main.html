@@ -40,14 +40,14 @@
       <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
 
       <!-- Card Container -->
-      <div class="cards grid grid-cols-3 gap-3">
+      <div class="cards mt-5 grid grid-cols-3 gap-3">
         <!-- Box - 1 -->
-        <div class="box border text-center rounded-md py-4 cursor-pointer">
+        <div id="cash-in-box" class="box border text-center rounded-md py-4 cursor-pointer">
           <img class="mx-auto" src="assets/wallet1.png" alt="">
           <h5>Add Money</h5>
         </div>
         <!-- Box - 2 -->
-        <div class="box border text-center rounded-md py-4 cursor-pointer">
+        <div id="cash-out-box" class="box border text-center rounded-md py-4 cursor-pointer">
           <img class="mx-auto" src="assets/send1.png" alt="">
           <h5>Cashout</h5>
         </div>
@@ -73,33 +73,68 @@
         </div>
       </div>
 
-      <!-- Add Money -->
       <section>
-        <h2 class="font-bold text-center mt-6">Add Money</h2>
-        <div class="">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <!-- Add Money -->
+        <div id="cash-in" class="">
+          <h2 class="font-bold text-center mt-6">Add Money</h2>
+          <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
 
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-              <div class="card-body">
-                <legend>Select Bank</legend>
-                <select class="select">
-                  <option disabled selected>Pickup a Bank</option>
-                  <option>Bkash</option>
-                  <option>Nagod</option>
-                  <option>UCB</option>
-                </select>
-                <fieldset class="fieldset">
-                  <label class="fieldset-label">Bank Account Number</label>
-                  <input id="account-number" value="01301301302" type="number" class="input"
-                    placeholder="Enter 11 digit account number" />
-                  <label class="fieldset-label">Amount to Add</label>
-                  <input id="amount-number" type="number" class="input" placeholder="Add Amount to withdraw" />
-                  <label class="fieldset-label">Pin Number</label>
-                  <input id="pin-number" value="1234" type="text" class="input"
-                    placeholder="Enter 4 digit pin number" />
-                  <div><a class="link link-hover">Forgot password?</a></div>
-                  <button id="add-money-btn" class="btn btn-neutral mt-4">Add Money</button>
-                </fieldset>
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <legend>Select Bank</legend>
+                  <select class="select">
+                    <option disabled selected>Pickup a Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagod</option>
+                    <option>UCB</option>
+                  </select>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Bank Account Number</label>
+                    <input id="account-number" value="01301301302" type="number" class="input"
+                      placeholder="Enter 11 digit account number" />
+                    <label class="fieldset-label">Amount to Add</label>
+                    <input id="amount-number" type="number" class="input" placeholder="Add Amount to withdraw" />
+                    <label class="fieldset-label">Pin Number</label>
+                    <input id="pin-number" value="1234" type="text" class="input"
+                      placeholder="Enter 4 digit pin number" />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="add-money-btn" class="btn btn-neutral mt-4">Add Money</button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CashOut -->
+        <div id="cash-out" class="hidden">
+          <h2 class="font-bold text-center mt-6">Withdraw Money</h2>
+          <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <legend>Select Bank</legend>
+                  <select class="select">
+                    <option disabled selected>Pickup a Bank</option>
+                    <option>Bkash</option>
+                    <option>Nagod</option>
+                    <option>UCB</option>
+                  </select>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Agent Number</label>
+                    <input id="agent-number" value="01301301302" type="number" class="input"
+                      placeholder="Enter 11 digit account number" />
+                    <label class="fieldset-label">Amount</label>
+                    <input id="cash-out-amount" type="number" class="input" placeholder="Add Amount to withdraw" />
+                    <label class="fieldset-label">Pin Number</label>
+                    <input id="pin-number-2" value="1234" type="text" class="input"
+                      placeholder="Enter 4 digit pin number" />
+                    <div><a class="link link-hover">Forgot password?</a></div>
+                    <button id="withdraw-money-btn" class="btn btn-neutral mt-4">Withdraw Money</button>
+                  </fieldset>
+                </div>
               </div>
             </div>
           </div>
@@ -110,6 +145,7 @@
 
   <script src="scripts/utilities.js"></script>
   <script src="scripts/addmoney.js"></script>
+  <script src="scripts/cashout.js"></script>
 </body>
 
 </html>
