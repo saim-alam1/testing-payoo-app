@@ -11,6 +11,8 @@ document.getElementById('withdraw-money-btn').addEventListener('click', function
 
   const mainBalance = convertMainBalanceIntoNumber('main-balance');
 
+  const selectedBank = document.getElementById('all-bank').value;
+
   const agentNumber = forValue('agent-number');
 
   const amount = convertToNumber('cash-out-amount');
@@ -18,6 +20,10 @@ document.getElementById('withdraw-money-btn').addEventListener('click', function
 
   const pinNumber = convertToNumber('pin-number-2');
 
+  if (amount > mainBalance) {
+    alert('Invalid Amont');
+    return;
+  }
 
   if (agentNumber.length === 11) {
     if (amount && pinNumber) {
@@ -27,10 +33,19 @@ document.getElementById('withdraw-money-btn').addEventListener('click', function
 
         const container = document.getElementById('transaction-container');
 
-        const p = document.createElement('p');
-        p.innerText = `Cashout ${amount} from Agent Number ${agentNumber}`;
 
-        container.appendChild(p);
+
+
+        const div = document.createElement('div');
+        div.classList.add('bg-green-500');
+        div.innerHTML = `
+        <h1 class='bg-yellow-400 text-center'>Added Money from ${selectedBank}</h1>
+        <h3 class='text-center'>${amount}</h3>
+        <p class='text-center'>Acoount number: ${agentNumber}</p>`
+
+        container.appendChild(div);
+
+
 
 
       } else {

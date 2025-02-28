@@ -83,8 +83,7 @@
               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
                   <legend>Select Bank</legend>
-                  <select class="select">
-                    <option disabled selected>Pickup a Bank</option>
+                  <select id="all-bank" class="select">
                     <option>Bkash</option>
                     <option>Nagod</option>
                     <option>UCB</option>
@@ -117,7 +116,6 @@
                 <div class="card-body">
                   <legend>Select Bank</legend>
                   <select class="select">
-                    <option disabled selected>Pickup a Bank</option>
                     <option>Bkash</option>
                     <option>Nagod</option>
                     <option>UCB</option>
@@ -141,7 +139,7 @@
         </div>
       </section>
 
-      <section id="transaction-history">
+      <section id="transaction-history" class="hidden">
         <h1 class="text-3xl font-bold text-center p-4">Transaction History</h1>
 
         <div id="transaction-container">

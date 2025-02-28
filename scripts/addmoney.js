@@ -15,6 +15,14 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
 
   const mainBalance = convertMainBalanceIntoNumber('main-balance');
 
+  const selectedBank = document.getElementById('all-bank').value;
+  // console.log(selectedBank);
+
+  if (amountToAdd < 0) {
+    alert('Please input positive number');
+    return;
+  }
+
   if (amountToAdd && pinNumber) {
     if (accountNumber.length === 11) {
       if (pinNumber === 1234) {
@@ -23,11 +31,16 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
 
         const container = document.getElementById('transaction-container');
 
-        const p = document.createElement('p');
-        p.innerText = `Added ${amountToAdd} from ${accountNumber}`;
 
-        container.appendChild(p);
 
+        const div = document.createElement('div');
+        div.classList.add('bg-red-500');
+        div.innerHTML = `
+        <h1 class='bg-yellow-400 text-center'>Added Money from ${selectedBank}</h1>
+        <h3 class='text-center'>${amountToAdd}</h3>
+        <p class='text-center'>Acoount number: ${accountNumber}</p>`
+
+        container.appendChild(div);
 
 
       } else {
